@@ -12,7 +12,7 @@ const App = () => {
     isPending,
   } = useQuery({ queryKey: ['greeting', count], queryFn: getGreeting })
 
-  if (isPending) return <p>Loading...</p>
+  if (isPending) return <p className='text-cyan-300 bg-amber-400'>Loading...</p>
 
   return (
     <>
