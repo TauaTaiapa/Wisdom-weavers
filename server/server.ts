@@ -4,6 +4,8 @@ import cors, { CorsOptions } from 'cors'
 
 const server = express()
 
+import quote from '../client/routes/getQuote'
+
 server.get('/api/v1/greeting', (req, res) => {
   const greetings = ['hola', 'hi', 'hello', 'howdy']
   const index = Math.floor(Math.random() * greetings.length)
@@ -13,6 +15,7 @@ server.get('/api/v1/greeting', (req, res) => {
 
 server.use(express.json())
 server.use(cors('*' as CorsOptions))
+server.use('api/v1/quote', quote)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))

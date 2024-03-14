@@ -6,7 +6,7 @@ export async function getGreeting(): Promise<string> {
   return res.body.greeting
 }
 
-export async function getRandomQuote(): Promise<Root> {
+export async function getQuote(): Promise<Root> {
   const res = await request.get(`https://api.quotable.io/random`)
-  return res.body.result
+  return res.body
 }
