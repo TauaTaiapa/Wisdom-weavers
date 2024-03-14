@@ -8,5 +8,5 @@ export async function getGreeting(): Promise<string> {
 
 export async function getQuote(): Promise<Root> {
   const res = await request.get(`https://api.quotable.io/random`)
-  return res.body.result
+  return res.body
 }

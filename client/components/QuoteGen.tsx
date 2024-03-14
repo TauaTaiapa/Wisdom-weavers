@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getQuote } from '../apiClient.ts'
+import { getQuote } from '../apiClient'
 import React from 'react'
 
 function QuoteGen() {
@@ -33,3 +33,5 @@ function QuoteGen() {
     </div>
   )
 }
+
+export default QuoteGen
