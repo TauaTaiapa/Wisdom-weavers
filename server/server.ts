@@ -7,7 +7,7 @@ const server = express()
 import quote from '../client/routes/getQuote'
 
 server.get('/api/v1/greeting', (req, res) => {
-  const greetings = ['hola', 'hi', 'hello', 'howdy']
+  const greetings = ['hola', 'bonjour', 'hello', 'konnichiwa', 'ni hao']
   const index = Math.floor(Math.random() * greetings.length)
   console.log(index)
   res.json({ greeting: greetings[index] })
